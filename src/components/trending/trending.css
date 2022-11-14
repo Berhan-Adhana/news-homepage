@@ -1,0 +1,48 @@
+.trending {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 1rem;
+  flex-wrap: wrap;
+}
+.trending .trendingContainer {
+  width: 350px;
+  height: 129px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.trending .trendingContainer img {
+  max-width: 100%;
+  width: 100px;
+  height: 129px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.trending .trendingContainer .trendingInfo {
+  width: 226px;
+  height: 129px;
+}
+.trending .trendingContainer .trendingInfo .rank {
+  color: hsl(236deg, 13%, 42%);
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+.trending .trendingContainer .trendingInfo .title {
+  margin: 5px 0;
+  cursor: pointer;
+}
+.trending .trendingContainer .trendingInfo .title:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+.trending .trendingContainer .trendingInfo p {
+  color: hsl(236deg, 13%, 42%);
+  font-size: 11px;
+}
+
+@media screen and (max-width: 320px) {
+  .trending .trendingContainer {
+    width: 100vw;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=trending.css.map */

@@ -1,0 +1,82 @@
+@use '../../utility' as *;
+.navbar{
+    align-items: center;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+
+   
+    .logo{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .6s;
+        li{
+            margin-left: 10px;
+            cursor: pointer;
+            color:$very-dark-blue;
+            transition: all .4s;
+
+            &:hover{
+                color:  $soft-red;
+            }
+        }
+        
+    }
+    .btn{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: none;
+        font-size: 1.8rem;
+        opacity: 0;
+        outline: none;
+        padding: 5px;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .navbar{
+        position: relative;
+    
+        ul{
+            background: $off-white;
+            flex-direction: column;
+            gap: 15px;
+            height: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transform: translateX(100vw);
+            width: 50%;
+            z-index: 999;
+
+        }
+        
+
+        .responsive-navbar{
+            transform: none;
+        }
+        .menuClose{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .btn{
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+    
+        
+    }
+    
+}

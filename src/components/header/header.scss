@@ -1,0 +1,200 @@
+@use '../../utility' as *;
+.header{
+    display: flex;
+    // flex-direction: row;
+    margin: 2rem 1rem;
+    gap: 2rem;
+          
+    .right{
+        flex: 3;
+        img{
+            max-width: 100%;
+            object-fit: cover;
+            height: 350px;
+            border-radius: 5px;
+            
+
+        }
+        .headerTitle{
+            display: flex;
+            margin-top: 1rem;
+            gap: 2rem;
+            
+            h1{
+                flex: 1;
+                font-weight: 800;
+                font-size: clamp(2rem, 4vw,3.5rem);
+                line-height: 56px;
+
+            }
+        }
+
+        .headerInfo{
+            flex: 1;
+            button{
+                color: $off-white;
+                background-color: $soft-red;
+                border: none;
+                outline: none;
+                padding: 12px 1.5rem;
+                margin-top: 2.5rem;
+                // border-radius: 5px
+                color: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $very-dark-blue;
+                }
+            }
+        }
+
+    }
+
+    .left{
+        flex: 1;
+        background-color:$very-dark-blue ;
+        color: white;
+        padding: 1rem 1.2rem 0 1.2rem;
+        h1{
+            color:$soft-orange;
+            font-size: 1.5rem;
+        }
+
+        hr{
+            height: .2px;
+            background: $grayish-dark-blue;
+            border: none;
+            margin: 2rem 0;
+            display: block;
+
+
+        }
+        .latestNews{
+            h4{
+                margin-top: 1rem;
+                cursor: pointer;
+                &:hover{
+                    color:hsl(35, 77%, 62%); ;
+                }
+            }
+
+            p{
+               
+                color: hsl(236, 13%, 42%);
+                margin-top: 10px;
+                margin-bottom: 1rem;
+                font-size: 12px;;
+            }
+
+        }
+
+    }
+  
+ 
+}
+
+@media screen and (max-width:912px) {
+    .header{    
+        max-width: 90vw;   
+        .right{          
+            .headerTitle{
+                gap: 2rem;
+            }
+    
+        }
+    
+        .left{
+            flex: 1.2;
+        }
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .header{         
+        .right{          
+            .headerTitle{
+                gap: 2rem;
+               
+            }
+    
+        }
+    
+        .left{
+            flex: 1.4;
+    
+            hr{
+                margin: 1rem 0;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:490px) {
+    .header{
+       flex-direction: column;
+        
+        .right{
+            .headerTitle{
+                gap: 2rem;
+                h1{
+                   line-height: 40px;
+    
+                }
+                .headerInfo{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }
+    
+           
+    
+        }
+      
+     
+    }
+    
+}
+
+@media screen and (max-width:375px) {
+    .header{   
+        .right{
+            .headerTitle{
+                h1{
+                    line-height: 40px;
+     
+                 }
+
+                .headerInfo{
+                    button{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+      
+     
+    }
+    
+}
+
+@media screen and (max-width:375px) {
+    .header{  
+        width: 90vw; 
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (max-width:320px) {
+    .header{  
+        width: 100vw; 
+        margin: 0 auto;
+       
+      
+     
+    }
+    
+}

@@ -1,0 +1,57 @@
+@use '../../utility' as *;
+.trending{
+    display: flex;
+    justify-content: space-between;
+    margin:3rem 1rem;
+    flex-wrap: wrap;
+    
+    .trendingContainer{
+        width: 350px;
+        height: 129px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 1rem;
+        img{
+            max-width: 100%;
+            width: 100px;
+            height: 129px;
+            object-fit: cover;
+        }
+        .trendingInfo{
+            width: 226px;
+            height: 129px;
+    
+            .rank{
+                color: $grayish-dark-blue;
+                font-size: 1.5rem;
+                margin-top: 0;
+            }
+            .title{
+                margin: 5px 0;
+                cursor: pointer;
+                &:hover{
+                    color:$soft-red ;
+                }
+    
+            }
+            p{
+                color: $grayish-dark-blue ;
+                font-size: 11px;
+
+            }
+        }
+    }
+
+ 
+}
+@media screen and (max-width:320px) {
+    .trending{
+        .trendingContainer{
+            width: 100vw;
+            gap: 1rem;
+        }
+    }
+    
+}
+

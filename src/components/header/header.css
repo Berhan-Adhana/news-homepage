@@ -1,0 +1,131 @@
+.header {
+  display: flex;
+  margin: 2rem 1rem;
+  gap: 2rem;
+}
+.header .right {
+  flex: 3;
+}
+.header .right img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 350px;
+  border-radius: 5px;
+}
+.header .right .headerTitle {
+  display: flex;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+.header .right .headerTitle h1 {
+  flex: 1;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 56px;
+}
+.header .right .headerInfo {
+  flex: 1;
+}
+.header .right .headerInfo button {
+  color: hsl(36deg, 100%, 99%);
+  background-color: hsl(5deg, 85%, 63%);
+  border: none;
+  outline: none;
+  padding: 12px 1.5rem;
+  margin-top: 2.5rem;
+  color: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.header .right .headerInfo button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+.header .left {
+  flex: 1;
+  background-color: hsl(240deg, 100%, 5%);
+  color: white;
+  padding: 1rem 1.2rem 0 1.2rem;
+}
+.header .left h1 {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 1.5rem;
+}
+.header .left hr {
+  height: 0.2px;
+  background: hsl(236deg, 13%, 42%);
+  border: none;
+  margin: 2rem 0;
+  display: block;
+}
+.header .left .latestNews h4 {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.header .left .latestNews h4:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.header .left .latestNews p {
+  color: hsl(236deg, 13%, 42%);
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 912px) {
+  .header {
+    max-width: 90vw;
+  }
+  .header .right .headerTitle {
+    gap: 2rem;
+  }
+  .header .left {
+    flex: 1.2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .right .headerTitle {
+    gap: 2rem;
+  }
+  .header .left {
+    flex: 1.4;
+  }
+  .header .left hr {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 490px) {
+  .header {
+    flex-direction: column;
+  }
+  .header .right .headerTitle {
+    gap: 2rem;
+  }
+  .header .right .headerTitle h1 {
+    line-height: 40px;
+  }
+  .header .right .headerTitle .headerInfo p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header .right .headerTitle h1 {
+    line-height: 40px;
+  }
+  .header .right .headerTitle .headerInfo button {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header {
+    width: 100vw;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=header.css.map */
